@@ -157,7 +157,7 @@ section {
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
-        text-align:left;
+        text-align: left;
     }
 
     .about-text {
@@ -417,7 +417,7 @@ footer {
   }
   
   .email-link:hover {
-    text-decoration: underline;
+    color: #ffc107;
   }
   
   .contact-photo-container {
