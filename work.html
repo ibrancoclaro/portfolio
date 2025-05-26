@@ -28,55 +28,90 @@
     </header>
 
     <!-- Modal for full-size image display -->
-  <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImg">
-    <div id="caption"></div>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-gallery" id="modalGallery"></div>
+    </div>
+    
 </div>
 
     <!-- Portfolio Section -->
      <section id="portfolio" class="portfolio-section">
          <div class="gallery">
-            <div class="gallery-item large"><img src="portfolio_web/matryoshka.gif" alt="Matryoshka" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/street_food_festival.jpg" alt="Street Food Festival" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/Lark.jpg" alt="Lark" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/happy.jpg" alt="Happy" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/Autumn:Burn.jpg" alt="Autumn/Burn" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/Bleed.jpg" alt="Bleed" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/bordados.jpg" alt="Uso o coração para os alfinetes" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/BS_TAKANAKA.jpg" alt="Brasilian Skies" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/clock.jpg" alt="Zyttglogge" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/trust.jpg" alt="Trust" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/drowning.jpg" alt="Drowning" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/talking to myself.jpg" alt="Talking to Myself" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/friendsI.jpg" alt="Friends I" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/life_of_pi.jpg" alt="Life of Pi Poster" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/karaoke.jpg" alt="Karaoke" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/Solitude.jpg" alt="Solitude" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/thehighpriestess.jpg" alt="The High Priestess" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/micropia.gif" alt="Micropia" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/Tasseomancy.jpg" alt="Tasseomancy" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/The bird stops and listens.jpg" alt="The Bird Stops and Listens" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/bungeoppang.jpg" alt="Bungeoppang" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/Men_in_the_sun_cover.jpg" alt="Men in the Sun book cover" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/timeless.jpg" alt="Timeless" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/wind-up.jpg" alt="Wind-up" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/wind.jpg" alt="Wind" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/drinki de bolsoI.jpg" alt="Cocktail" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/estradas1.jpg" alt="Estradas I" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/estradas2.jpg" alt="Estradas II" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/lookattheview.jpg" alt="Look at the view" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/wander.jpg" alt="Wander" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/OneFlewOverTheCuckoosNest.jpg" alt="One Flew Over The Cuckoos Nest Poster" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/nightmares.jpg" alt="Nightmares" onclick="openModal(this)"></div>
-            <div class="gallery-item small"><img src="portfolio_web/the world.jpg" alt="The World" onclick="openModal(this)"></div>
-	    <div class="gallery-item small"><img src="portfolio_web/Take_me_away_8.gif" alt="Take me away" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/coroa_de_louros.jpg" alt="Coroa de Louros" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/bard.jpg" alt="Bard" onclick="openModal(this)"></div>
-	    <div class="gallery-item large"><img src="portfolio_web/QueBonitoQueFoi_1.jpg" alt="Que Bonito que Foi" onclick="openModal(this)"></div>
-            <div class="gallery-item large"><img src="portfolio_web/fireworks.jpg" alt="Fireworks" onclick="openModal(this)"></div>
-            <div class="gallery-item medium"><img src="portfolio_web/A_Pescadora.jpg" alt="Pescadora" onclick="openModal(this)"></div>
-	    <div class="gallery-item medium"><img src="portfolio_web/turtles_all_the_way_down.jpg" alt="Turtles all the way down" onclick="openModal(this)"></div>
+            <div class="gallery-item large"><img src="portfolio_web/matryoshka.gif" alt="Matryoshka" onclick="openGallery([
+                'portfolio_web/matryoshka1.jpg', 
+                'portfolio_web/matryoshka2.jpg', 
+                'portfolio_web/matryoshka3.jpg', 
+                'portfolio_web/matryoshka4.jpg', 
+                'portfolio_web/matryoshka5.jpg', 
+                'portfolio_web/matryoshka6.jpg', 
+              ])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/streetmockup.jpg" alt="Street Food Festival" onclick="openGallery([
+                'portfolio_web/street_food_festival.jpg', 
+                'portfolio_web/streetmockup.jpg', 
+                'portfolio_web/flagmockup.jpg'
+              ])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/happy.jpg" alt="Happy" onclick="openGallery(['portfolio_web/happy.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/assteccar.jpg" alt="Cartaz Primeiro Encontro Assistentes Técnicos" onclick="openGallery([
+                'portfolio_web/assteccar.jpg', 
+                'portfolio_web/assteccar1.jpg', 
+                'portfolio_web/idasstec.jpg'
+              ])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/Autumn:Burn.jpg" alt="Autumn/Burn" onclick="openGallery(['portfolio_web/Autumn:Burn.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/Lark.jpg" alt="Lark" onclick="openGallery(['portfolio_web/Lark.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/bordados.jpg" alt="Uso o coração para os alfinetes" onclick="openGallery(['portfolio_web/bordados.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/BS_TAKANAKA.jpg" alt="Brasilian Skies" onclick="openGallery([
+                'portfolio_web/BS_TAKANAKA.jpg', 
+              ])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/clock.jpg" alt="Zyttglogge" onclick="openGallery(['portfolio_web/clock.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/trust.jpg" alt="Trust" onclick="openGallery(['portfolio_web/trust.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/drowning.jpg" alt="Drowning" onclick="openGallery(['portfolio_web/drowning.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/talking to myself.jpg" alt="Talking to Myself" onclick="openGallery(['portfolio_web/talking to myself.jpg'])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/friendsI.jpg" alt="Friends I" onclick="openGallery(['portfolio_web/friendsI.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/life_of_pi.jpg" alt="Life of Pi Poster" onclick="openGallery(['portfolio_web/life_of_pi.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/karaoke.jpg" alt="Karaoke" onclick="openGallery(['portfolio_web/karaoke.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/Solitude.jpg" alt="Solitude" onclick="openGallery(['portfolio_web/Solitude.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/the_answer_is_dreams.jpg" alt="The Answer Is Dreams" onclick="openGallery(['portfolio_web/the_answer_is_dreams.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/micropia.gif" alt="Micropia" onclick="openGallery([
+                'portfolio_web/micropia.gif', 
+                'portfolio_web/micropiamockup.jpg', 
+                'portfolio_web/micropiaposter.jpg'
+              ])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/Tasseomancy.jpg" alt="Tasseomancy" onclick="openGallery(['portfolio_web/Tasseomancy.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/The bird stops and listens.jpg" alt="The Bird Stops and Listens" onclick="openGallery(['portfolio_web/the bird stops and listens.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/bungeoppang.jpg" alt="Bungeoppang" onclick="openGallery(['portfolio_web/bungeoppang.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/Men_in_the_sun_cover.jpg" alt="Men in the Sun book cover" onclick="openGallery([
+                'portfolio_web/Men_in_the_sun_cover.jpg', 
+                'portfolio_web/meninthesunmockup.jpg', 
+              ])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/timeless.jpg" alt="Timeless" onclick="openGallery(['portfolio_web/timeless.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/wind-up.jpg" alt="Wind-up" onclick="openGallery(['portfolio_web/wind-up.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/wind.jpg" alt="Wind" onclick="openGallery(['portfolio_web/wind.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/drinki de bolsoI.jpg" alt="Cocktail" onclick="openGallery([
+                'portfolio_web/drinki de bolsoI.jpg', 
+              ])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/estradasmockup.jpg" alt="Estradas I" onclick="openGallery([
+                'portfolio_web/estradasmockup.jpg', 
+                'portfolio_web/estradas1.jpg', 
+                'portfolio_web/estradas2.jpg'
+              ])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/lookattheview.jpg" alt="Look at the view" onclick="openGallery(['portfolio_web/lookattheview.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/wander.jpg" alt="Wander" onclick="openGallery([
+                'portfolio_web/wander.gif', 
+                'portfolio_web/wander.jpg', 
+              ])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/OneFlewOverTheCuckoosNest.jpg" alt="One Flew Over The Cuckoos Nest Poster" onclick="openGallery(['portfolio_web/OneFlewOverTheCuckoosNest.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/nightmares.jpg" alt="Nightmares" onclick="openGallery(['portfolio_web/nightmares.jpg'])"></div>
+            <div class="gallery-item small"><img src="portfolio_web/the world.jpg" alt="The World" onclick="openGallery(['portfolio_web/the world.jpg'])"></div>
+	    <div class="gallery-item small"><img src="portfolio_web/Take_me_away_8.gif" alt="Take me away" onclick="openGallery(['portfolio_web/Take_me_away_8.jpg'])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/coroa_de_louros.jpg" alt="Coroa de Louros" onclick="openGallery([
+                'portfolio_web/coroa_de_louros.jpg', 
+              ])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/bard.jpg" alt="Bard" onclick="openGallery(['portfolio_web/bard.jpg'])"></div>
+	    <div class="gallery-item large"><img src="portfolio_web/QueBonitoQueFoi_1.jpg" alt="Que Bonito que Foi" onclick="openGallery(['portfolio_web/QueBonitoQueFoi_1.jpg'])"></div>
+            <div class="gallery-item large"><img src="portfolio_web/fireworks.jpg" alt="Fireworks" onclick="openGallery(['portfolio_web/fireworks.jpg'])"></div>
+            <div class="gallery-item medium"><img src="portfolio_web/A_Pescadora.jpg" alt="Pescadora" onclick="openGallery(['portfolio_web/A_Pescadora.jpg'])"></div>
+	    <div class="gallery-item medium"><img src="portfolio_web/turtles_all_the_way_down.jpg" alt="Turtles all the way down" onclick="openGallery(['portfolio_web/turtles_all_the_way_down.jpg'])"></div>
 
  	<!--<div class="gallery-item large">
                 <video controls onclick="openModal(this)">
@@ -93,20 +128,38 @@
     </footer>
 
     <script>
-        function openModal(imgElement) {
-            var modal = document.getElementById("imageModal");
-            var modalImg = document.getElementById("modalImg");
-            var captionText = document.getElementById("caption");
+        function openGallery(images) {
+            const modal = document.getElementById("imageModal");
+            const gallery = document.getElementById("modalGallery");
+            gallery.innerHTML = ""; // Clear previous content
+    
+            images.forEach(src => {
+                const img = document.createElement("img");
+                img.src = src;
+                img.classList.add("modal-img-item");
+                gallery.appendChild(img);
+            });
     
             modal.style.display = "block";
-            modalImg.src = imgElement.src;
-            captionText.innerHTML = imgElement.alt;
         }
     
         function closeModal() {
-            var modal = document.getElementById("imageModal");
-            modal.style.display = "none";
+            document.getElementById("imageModal").style.display = "none";
         }
+    
+        // ESC key closes modal
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    
+        // Optional: Close when clicking outside image
+        document.getElementById("imageModal").addEventListener('click', function(e) {
+            if (e.target.id === "imageModal") {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>
