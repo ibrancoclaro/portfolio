@@ -146,15 +146,11 @@
         function closeModal() {
             document.getElementById("imageModal").style.display = "none";
         }
-    
-        // ESC key closes modal
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 closeModal();
             }
         });
-    
-        // Optional: Close when clicking outside image
         document.getElementById("imageModal").addEventListener('click', function(e) {
             if (e.target.id === "imageModal") {
                 closeModal();
